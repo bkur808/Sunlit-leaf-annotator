@@ -23,7 +23,8 @@ from .skimage_segmenter import SkimageSegmenter
 class Slic(Segmenter, SkimageSegmenter):
     """Run SLIC (Simple Linear Iterative Clustering) segmentation."""
 
-    def __init__(self, n_segments = 350, sigma = 1.5, compactness = 50.0, border_color = 'Yellow', border_outline = 'No'):
+    # CURRENTLY CONFIGURED FOR WORK WITH ALMOND DATASETS BY DEFAULT
+    def __init__(self, n_segments = 800, sigma = 1.5, compactness = 50.0, border_color = 'Yellow', border_outline = 'No'):
         """Constructor.
 
         Parameters
