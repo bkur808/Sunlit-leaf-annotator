@@ -55,6 +55,8 @@ This will print to the terminal a list of remaining files in your train folder w
 
 #### Happy Annotating! 
 
+For questions, please feel free to contact Brian (Fresno AIIS CIWA+ team) at bkurzeja@mail.fresnostate.edu
+
 Original software found at http://git.inovisao.ucdb.br/inovisao/pynovisao .
 
 NPOSL-30 https://opensource.org/licenses/NPOSL-3.0 - Free for non-profit use (E.g.: Education, scientific research, etc.). Contact Inovisão's Prof. Hemerson Pistori (pistori@ucdb.br), should any interest in commercial exploration of this software arise.
