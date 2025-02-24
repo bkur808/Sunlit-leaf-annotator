@@ -1,3 +1,4 @@
 *.pyc
 data/*
 !data/class_dict.csv
+!data/mask_creator.py
