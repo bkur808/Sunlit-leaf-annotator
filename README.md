@@ -1,11 +1,12 @@
 
-## Installation
+## Installation (Updated 2/23/25 for compatabilities)
 
-### Windows
+### Windows/Linux Set-up
 
- Download and install Anaconda for Python 2.7 64-bit https://www.anaconda.com/distribution/
+ If using Windows - download and install Anaconda for Python 3, or alternatively, set up a virtual machine with any Linux distribution (for example Debian-Ubuntu on WSL2)
  
- Open an Anaconda2 terminal
+ Open a terminal, then clone this repository into a directory.
+ Then, from the directory you can install the required libraries and packages using the below scripts.
  
  ```
  $ cd path/to/your/project
@@ -15,38 +16,44 @@
  $ pip install -r requirements.txt
  ```
 
-### How to use
+### How to begin:
 
-Place all images you wish to annotate in the data/train/ directory
+Place all images you wish to annotate in the data/train/ directory.
 
-Once you are in the project's root folder
-
-```
- $ cd src
-```
+Once you are in the project's root folder run. 
 
 ```
- $ python main.py
+ $ cd src ; python3 main.py
 ```
+#### Currently on startup this app version initializes with the default segmentation requirements almond segmentation for Fresno State's AIIS CIWA+ research group.
 
-
- Once the UI is initialized go to File -> Open an Image and select one image from the "train" folder
+Once the UI is initialized go to File -> Open an Image and select one image from your "train" folder.
  
-  Segmentation -> Execute (You can play around with the different segmentators or configurations to see what happens, but i suggest   using the preconfigured ones)
+Segmentation -> Execute 
 
 After the segmentation finishes, you will see that the image is now split and each segment has a border around it.
 
-### Annotation steps
+### Annotation steps:
 
 1.  By default all segments are annotated as Noise.
 2.  Click on the Sunlit class (on the left of the panel) and annotate the sunlit leaves.
 
 **If you missclick by accident, pick the correct class and click again**
 
-**Finally, if you open an already annotated image, the annotation will be reset, so keep track of your completed images**
+**!!! Warning, if you open an already annotated image, the annotation will be reset, so keep track of your completed images!!!**
 
-You can find the generated mask for your image inside data/train_labels/
+You can find the generated mask for your image inside data/train_labels/.
 
+### Checking your progress and review:
+
+In order to review your progress, we can create a review folder of mask overlays, beginning from the project root folder:
+
+```
+cd data ; python3 mask_creator.py
+```
+This will print to the terminal a list of remaining files in your train folder which require annotations, as well as create overlay images in a folder /data/overlay_masks_review in order to review your work. 
+
+#### Happy Annotating! 
 
 Original software found at http://git.inovisao.ucdb.br/inovisao/pynovisao .
 
