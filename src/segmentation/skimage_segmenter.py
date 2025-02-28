@@ -240,9 +240,20 @@ class SkimageSegmenter(object):
         """
         self._original_image = image
 
-        # Run the segmentation using the method passed
+        # TASK!!!
+        # Grab image.
+        # Use the name to hunt out the already upscaled thermal images.
+        #
+        # thermal_img = img_as_float(path-to-file-using-image-name)
+        # rgb_img = img_as_float(image)
+        # thermal_img = np.expand_dims(thermal_img, axis=-1)
+        # rgbt_img = np.concatenate((rgb_img, thermal_img), axis=-1
+
+        # Run the segmentation using the method passed (here we are using Slic)
         start_time = TimeUtils.get_time()
         self._segments = method(img_as_float(image), **kwargs)
+        # print("Hey :)") # For testing and finding stuff :)
+        # print(img_as_float(image)) # See above :)
         end_time = TimeUtils.get_time()
         
         color = X11Colors.get_color_zero_one(self.border_color.get_cast_val())
