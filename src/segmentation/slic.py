@@ -176,7 +176,9 @@ class Slic(Segmenter, SkimageSegmenter):
         ----------
         image : opencv 3-channel color image.
             Original image.
-            
+
+
+
         Returns
         -------
         new_image : opencv 3-channel color image.
